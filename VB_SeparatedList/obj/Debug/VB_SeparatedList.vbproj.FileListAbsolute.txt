@@ -1,0 +1,9 @@
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\obj\Debug\VB_SeparatedList.Resources.resources
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\obj\Debug\VB_SeparatedList.vbproj.GenerateResource.Cache
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\bin\Debug\VB_SeparatedList.dll
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\bin\Debug\VB_SeparatedList.pdb
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\bin\Debug\VB_SeparatedList.xml
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\obj\Debug\VB_SeparatedList.dll
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\obj\Debug\VB_SeparatedList.xml
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\obj\Debug\VB_SeparatedList.pdb
+C:\Geof Petit\Training\SeparatedList\VB_SeparatedList\obj\Debug\VB_SeparatedList.vbprojResolveAssemblyReference.cache
