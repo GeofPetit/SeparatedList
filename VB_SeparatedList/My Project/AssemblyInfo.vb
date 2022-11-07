@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("VB_SeparatedList")> 
+<Assembly: AssemblyTitle("vb_SeparatedList")> 
 <Assembly: AssemblyDescription("")> 
 <Assembly: AssemblyCompany("")> 
-<Assembly: AssemblyProduct("VB_SeparatedList")> 
+<Assembly: AssemblyProduct("vb_SeparatedList")> 
 <Assembly: AssemblyCopyright("Copyright ©  2022")> 
 <Assembly: AssemblyTrademark("")> 
 

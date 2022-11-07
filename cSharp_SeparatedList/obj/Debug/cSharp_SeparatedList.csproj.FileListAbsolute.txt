@@ -1,5 +1,4 @@
 C:\Geof Petit\Training\SeparatedList\cSharp_SeparatedList\bin\Debug\cSharp_SeparatedList.dll
 C:\Geof Petit\Training\SeparatedList\cSharp_SeparatedList\bin\Debug\cSharp_SeparatedList.pdb
-C:\Geof Petit\Training\SeparatedList\cSharp_SeparatedList\obj\Debug\cSharp_SeparatedList.csprojResolveAssemblyReference.cache
 C:\Geof Petit\Training\SeparatedList\cSharp_SeparatedList\obj\Debug\cSharp_SeparatedList.dll
 C:\Geof Petit\Training\SeparatedList\cSharp_SeparatedList\obj\Debug\cSharp_SeparatedList.pdb

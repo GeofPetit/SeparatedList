@@ -9,9 +9,9 @@ public class cSharp_SeparatedList
         //*******************************************************************************************************************************
         //* Private variables                                                                                                           *
         //*******************************************************************************************************************************
-        private Char _Separator;
-        private List<String> _Entries;
-        private List<Char> _UnusedSeparators;
+        private Char _separator;
+        private List<String> _entries;
+        private List<Char> _unusedSeparators;
     #endregion
 
     #region "Public Variables"
@@ -28,18 +28,18 @@ public class cSharp_SeparatedList
         //*******************************************************************************************************************************
         public List<string> Entries
         {
-            get { return this._Entries; }
+            get { return this._entries; }
         }
 
         public Char Separator
         {
-            get { return this._Separator; }
-            set { this._Separator = value; }
+            get { return this._separator; }
+            set { this._separator = value; }
         }
 
         public List<char> UnusedSeparators
         {
-            get { return this._UnusedSeparators; }
+            get { return this._unusedSeparators; }
         }
     #endregion
 
@@ -52,13 +52,13 @@ public class cSharp_SeparatedList
             // Initialise a list of all available separator characters
             ValidSeparatorCharacters = new List<Char> {};
 
-            for (Int16 CharCode = 0; CharCode < 256; CharCode++)
+            for (Int16 charCode = 0; charCode < 256; charCode++)
             {
-                Char CurrentCharacter = Convert.ToChar(CharCode);
+                Char currentCharacter = Convert.ToChar(charCode);
 
-                if (!InvalidSeparatorCharacters.Contains(CurrentCharacter))
+                if (!InvalidSeparatorCharacters.Contains(currentCharacter))
                 {
-                    ValidSeparatorCharacters.Add(CurrentCharacter);
+                    ValidSeparatorCharacters.Add(currentCharacter);
                 }
             }
         }
@@ -68,58 +68,58 @@ public class cSharp_SeparatedList
         //*******************************************************************************************************************************
         //* Public methods                                                                                                              *
         //*******************************************************************************************************************************
-        public cSharp_SeparatedList(String FromString)
+        public cSharp_SeparatedList(String fromString)
         {
             // Initialise the separator value
-            if (FromString.Length > 0)
+            if (fromString.Length > 0)
             {
-                this._Separator = Convert.ToChar(FromString.Substring(0, 1));
+                this._separator = Convert.ToChar(fromString.Substring(0, 1));
             }
             else
             {
-                this._Separator = Convert.ToChar(String.Empty);
+                this._separator = Convert.ToChar(String.Empty);
             }
 
             // Split the string into a list using the extracted separator
-            if (FromString.Length > 1)
+            if (fromString.Length > 1)
             {
-                this._Entries = new List<String>(FromString.Substring(1).Split(_Separator));
+                this._entries = new List<String>(fromString.Substring(1).Split(_separator));
             }
             else
             {
-                this._Entries = new List<String> { };
+                this._entries = new List<String> { };
             }
 
-            this._UnusedSeparators = new List<Char> { };
+            this._unusedSeparators = new List<Char> { };
         }
 
-        public cSharp_SeparatedList(Char Separator, params String[] Entries)
+        public cSharp_SeparatedList(Char separator, params String[] entries)
         {
             // Initialise the separator value and list using the values specified
-            this._Separator = Separator;
-            this._Entries = new List<String>(Entries);
-            this._UnusedSeparators = new List<Char> { };
+            this._separator = separator;
+            this._entries = new List<String>(entries);
+            this._unusedSeparators = new List<Char> { };
         }
 
-        public cSharp_SeparatedList(Char[] Separators, params String[] Entries)
+        public cSharp_SeparatedList(Char[] separators, params String[] entries)
         {
             // Add any initial entries to the list
-            this._Entries = new List<String>(Entries);
+            this._entries = new List<String>(entries);
 
-            if (Separators.Length == 1)
+            if (separators.Length == 1)
             {
                 // Choose the single separator character specified
-                this._Separator = Separators[0];
+                this._separator = separators[0];
             }
-            else if (Separators.Length > 1)
+            else if (separators.Length > 1)
             {
                 // Choose the next unused separator from the values specified
-                _FindNextNotUsedSeparator(Separators);
+                _findNextNotUsedSeparator(separators);
             }
             else
             {
                 // Choose the next unused separator from the list of all available valid separators
-                _FindNextNotUsedSeparator(cSharp_SeparatedList.ValidSeparatorCharacters.ToArray());
+                _findNextNotUsedSeparator(cSharp_SeparatedList.ValidSeparatorCharacters.ToArray());
             }
         }
 
@@ -134,23 +134,23 @@ public class cSharp_SeparatedList
         //*******************************************************************************************************************************
         //* Private methods                                                                                                             *
         //*******************************************************************************************************************************
-        private void _FindNextNotUsedSeparator(Char[] Separators)
+        private void _findNextNotUsedSeparator(Char[] separators)
         {
-            String SearchString = String.Join(String.Empty, _Entries);
-            this._UnusedSeparators = new List<Char> { };
+            String searchString = String.Join(String.Empty, _entries);
+            this._unusedSeparators = new List<Char> {};
             Boolean found = false;
 
-            foreach (Char Separator in Separators)
+            foreach (Char separator in separators)
             {
                 if (!found)
                 {
-                    if (!SearchString.Contains(Separator))
+                    if (!searchString.Contains(separator))
                     {
-                        this._Separator = Separator;
+                        this._separator = separator;
                         found = true;
                     }
                 } else {
-                    this._UnusedSeparators.Add(Separator);
+                    this._unusedSeparators.Add(separator);
                 }
             }
         }

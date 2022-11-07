@@ -14,7 +14,22 @@ Multiple levels of string lists can be embedded within a single string variable 
 
 e.g.
 
-,Geof,John,Mildred,Dave
+Geof
+    1979
+    Developer
+John
+    1980
+    Engineer
+Mildred
+    1959
+    Tester
+Dave
+    2005
+    Developer
+
+as :
+
+",Geof#1979#Developer,John#1980#Engineer,Mildred#1959#Tester,Dave#2005#Developer"
 
 Features
 --------
@@ -39,4 +54,4 @@ To start the application, open the SeparatedList.sln file in Visual Studio.Net a
 General Notes
 =============
 
-There are two versions of the Separated List class. The original VB version (vb_SeparatedList) and the newer c# version (cSharp_SeparatedList). The test harness is setup to run the c# version.
+There are two versions of the Separated List class. The original VB version (vb_SeparatedList) and the newer c# version (cSharp_SeparatedList). The test harness allows the selection of which version to test on each form.

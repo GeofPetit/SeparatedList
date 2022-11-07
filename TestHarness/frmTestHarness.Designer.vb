@@ -76,7 +76,7 @@ Partial Class frmTestHarness
         Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpMenu.Size = New System.Drawing.Size(1108, 825)
+        Me.tlpMenu.Size = New System.Drawing.Size(1108, 898)
         Me.tlpMenu.TabIndex = 3
         '
         'rbxReadMe
@@ -84,7 +84,7 @@ Partial Class frmTestHarness
         Me.rbxReadMe.Location = New System.Drawing.Point(3, 90)
         Me.rbxReadMe.Name = "rbxReadMe"
         Me.rbxReadMe.ReadOnly = True
-        Me.rbxReadMe.Size = New System.Drawing.Size(1102, 732)
+        Me.rbxReadMe.Size = New System.Drawing.Size(1102, 805)
         Me.rbxReadMe.TabIndex = 5
         Me.rbxReadMe.Text = ""
         '
@@ -92,7 +92,7 @@ Partial Class frmTestHarness
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1126, 849)
+        Me.ClientSize = New System.Drawing.Size(1133, 919)
         Me.Controls.Add(Me.tlpMenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmTestHarness"

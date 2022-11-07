@@ -10,7 +10,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestHarness", "TestHarness\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cSharp_SeparatedList", "cSharp_SeparatedList\cSharp_SeparatedList.csproj", "{B7BEF1FC-21AA-4BF4-BDB6-D10EAC92B1E7}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VB_SeparatedList", "VB_SeparatedList\VB_SeparatedList.vbproj", "{D3CBC325-7315-46BC-A643-C37A0824AF58}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "vb_SeparatedList", "vb_SeparatedList\vb_SeparatedList.vbproj", "{D3CBC325-7315-46BC-A643-C37A0824AF58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

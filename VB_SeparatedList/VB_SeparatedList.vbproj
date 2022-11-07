@@ -9,8 +9,8 @@
     </SchemaVersion>
     <ProjectGuid>{D3CBC325-7315-46BC-A643-C37A0824AF58}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>VB_SeparatedList</RootNamespace>
-    <AssemblyName>VB_SeparatedList</AssemblyName>
+    <RootNamespace>vb_SeparatedList</RootNamespace>
+    <AssemblyName>vb_SeparatedList</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>VB_SeparatedList.xml</DocumentationFile>
+    <DocumentationFile>vb_SeparatedList.xml</DocumentationFile>
     <NoWarn>
     </NoWarn>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>VB_SeparatedList.xml</DocumentationFile>
+    <DocumentationFile>vb_SeparatedList.xml</DocumentationFile>
     <NoWarn>
     </NoWarn>
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
@@ -51,24 +51,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="System" />
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
-    <Import Include="System.Data" />
     <Import Include="System.Diagnostics" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
-    <Import Include="VB_ConversionClasses" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="vbSeparatedList.vb" />
+    <Compile Include="vb_SeparatedList.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>

@@ -35,15 +35,15 @@
 '*                                                                                                                                        *
 '******************************************************************************************************************************************
 
-Public Class vbSeparatedList
+Public Class vb_SeparatedList
 
 #Region "Private Variables"
     '*******************************************************************************************************************************
     '* Private variables                                                                                                           *
     '*******************************************************************************************************************************
-    Private _Separator As Char
-    Private _Entries As List(Of String)
-    Private _UnusedSeparators As List(Of Char)
+    Private _separator As Char
+    Private _entries As List(Of String)
+    Private _unusedSeparators As List(Of Char)
 
     Public Shared InvalidSeparatorCharacters As New List(Of Char)(Convert.ToChar(0) & Environment.NewLine)
     Public Shared ValidSeparatorCharacters As List(Of Char)
@@ -52,23 +52,23 @@ Public Class vbSeparatedList
 #Region "Public Properties"
     Public ReadOnly Property Entries() As List(Of String)
         Get
-            Return _Entries
+            Return _entries
         End Get
     End Property
 
     Public Property Separator() As Char
         Get
-            Return _Separator
+            Return _separator
         End Get
 
         Set(value As Char)
-            _Separator = value
+            _separator = value
         End Set
     End Property
 
     Public ReadOnly Property UnusedSeparators() As List(Of Char)
         Get
-            Return _UnusedSeparators
+            Return _unusedSeparators
         End Get
     End Property
 #End Region
@@ -84,59 +84,59 @@ Public Class vbSeparatedList
         ValidSeparatorCharacters = New List(Of Char)
 
         For CharCode As Int16 = 0 To 255
-            Dim CurrentCharacter As Char = Convert.ToChar(CharCode)
+            Dim currentCharacter As Char = Convert.ToChar(CharCode)
 
-            If Not InvalidSeparatorCharacters.Contains(CurrentCharacter) Then
-                ValidSeparatorCharacters.Add(CurrentCharacter)
+            If Not InvalidSeparatorCharacters.Contains(currentCharacter) Then
+                ValidSeparatorCharacters.Add(currentCharacter)
             End If
         Next
     End Sub
 
-    Public Sub New(FromString As String)
+    Public Sub New(fromString As String)
 
         ' Initialise the separator value
-        If FromString.Length > 0 Then
-            _Separator = Convert.ToChar(FromString.Substring(0, 1))
+        If fromString.Length > 0 Then
+            _separator = Convert.ToChar(fromString.Substring(0, 1))
         Else
-            _Separator = Convert.ToChar(String.Empty)
+            _separator = Convert.ToChar(String.Empty)
         End If
 
         ' Split the string into a list using the extracted separator
-        If FromString.Length > 1 Then
-            _Entries = New List(Of String)(FromString.Substring(1).Split(_Separator))
+        If fromString.Length > 1 Then
+            _entries = New List(Of String)(fromString.Substring(1).Split(_separator))
         Else
-            _Entries = New List(Of String)
+            _entries = New List(Of String)
         End If
 
-        _UnusedSeparators = New List(Of Char)
+        _unusedSeparators = New List(Of Char)
     End Sub
 
-    Public Sub New(Separator As Char, ParamArray Entries As String())
+    Public Sub New(separator As Char, ParamArray entries As String())
 
         ' Initialise the separator value and list using the values specified
-        _Separator = Separator
-        _Entries = New List(Of String)(Entries)
-        _UnusedSeparators = New List(Of Char)
+        _separator = separator
+        _entries = New List(Of String)(entries)
+        _unusedSeparators = New List(Of Char)
     End Sub
 
-    Public Sub New(Separators() As Char, ParamArray Entries As String())
+    Public Sub New(separators() As Char, ParamArray entries As String())
 
         ' Add any initial entries to the list
-        _Entries = New List(Of String)(Entries)
+        _entries = New List(Of String)(entries)
 
-        Select Case Separators.Length
+        Select Case separators.Length
             Case 1
                 ' Choose the single separator character specified
-                _Separator = Separators(0)
+                _separator = separators(0)
 
             Case Is > 1
                 ' Choose the next unused separator from the values specified
-                m_FindNextNotUsedSeparator(Separators)
+                _findNextNotUsedSeparator(separators)
 
             Case Else
                 ' Choose the next unused separator from the list of all available valid separators
-                Separators = ValidSeparatorCharacters.ToArray()
-                m_FindNextNotUsedSeparator(Separators)
+                separators = ValidSeparatorCharacters.ToArray()
+                _findNextNotUsedSeparator(separators)
         End Select
     End Sub
 
@@ -150,20 +150,20 @@ Public Class vbSeparatedList
     '* Private methods                                                                                                             *
     '*******************************************************************************************************************************
 
-    Private Sub m_FindNextNotUsedSeparator(Separators() As Char)
+    Private Sub _findNextNotUsedSeparator(separators() As Char)
 
-        Dim SearchString As String = String.Join(String.Empty, _Entries)
-        _UnusedSeparators = New List(Of Char)
-        Dim Found As Boolean = False
+        Dim searchString As String = String.Join(String.Empty, _entries)
+        _unusedSeparators = New List(Of Char)
+        Dim found As Boolean = False
 
-        For Each Separator As Char In Separators
-            If Not Found Then
-                If Not SearchString.Contains(Separator) Then
-                    _Separator = Separator
-                    Found = True
+        For Each separator As Char In separators
+            If Not found Then
+                If Not searchString.Contains(separator) Then
+                    _separator = separator
+                    found = True
                 End If
             Else
-                _UnusedSeparators.Add(Separator)
+                _unusedSeparators.Add(separator)
             End If
         Next
     End Sub

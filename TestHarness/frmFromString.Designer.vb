@@ -25,6 +25,10 @@ Partial Class frmFromString
         Me.tlpMain = New System.Windows.Forms.TableLayoutPanel()
         Me.gbxInput = New System.Windows.Forms.GroupBox()
         Me.tlpInput = New System.Windows.Forms.TableLayoutPanel()
+        Me.flpClass = New System.Windows.Forms.FlowLayoutPanel()
+        Me.rbtCSharpSeparatedList = New System.Windows.Forms.RadioButton()
+        Me.rbtVBSeparatedList = New System.Windows.Forms.RadioButton()
+        Me.lblClass = New System.Windows.Forms.Label()
         Me.lblFromString = New System.Windows.Forms.Label()
         Me.txtFromString = New System.Windows.Forms.TextBox()
         Me.flpSubmit = New System.Windows.Forms.FlowLayoutPanel()
@@ -53,6 +57,7 @@ Partial Class frmFromString
         Me.tlpMain.SuspendLayout()
         Me.gbxInput.SuspendLayout()
         Me.tlpInput.SuspendLayout()
+        Me.flpClass.SuspendLayout()
         Me.flpSubmit.SuspendLayout()
         Me.gbxSeparatedList.SuspendLayout()
         Me.tlpSeparatedList.SuspendLayout()
@@ -77,7 +82,7 @@ Partial Class frmFromString
         Me.tlpMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpMain.RowStyles.Add(New System.Windows.Forms.RowStyle())
-        Me.tlpMain.Size = New System.Drawing.Size(600, 529)
+        Me.tlpMain.Size = New System.Drawing.Size(600, 564)
         Me.tlpMain.TabIndex = 0
         '
         'gbxInput
@@ -86,7 +91,7 @@ Partial Class frmFromString
         Me.gbxInput.Controls.Add(Me.tlpInput)
         Me.gbxInput.Location = New System.Drawing.Point(3, 3)
         Me.gbxInput.Name = "gbxInput"
-        Me.gbxInput.Size = New System.Drawing.Size(594, 125)
+        Me.gbxInput.Size = New System.Drawing.Size(594, 160)
         Me.gbxInput.TabIndex = 0
         Me.gbxInput.TabStop = False
         Me.gbxInput.Text = "Input"
@@ -98,34 +103,79 @@ Partial Class frmFromString
         Me.tlpInput.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
         Me.tlpInput.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
         Me.tlpInput.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 85.0!))
-        Me.tlpInput.Controls.Add(Me.lblFromString, 0, 0)
-        Me.tlpInput.Controls.Add(Me.txtFromString, 1, 0)
+        Me.tlpInput.Controls.Add(Me.flpClass, 1, 0)
+        Me.tlpInput.Controls.Add(Me.lblClass, 0, 0)
+        Me.tlpInput.Controls.Add(Me.lblFromString, 0, 1)
+        Me.tlpInput.Controls.Add(Me.txtFromString, 1, 1)
         Me.tlpInput.Controls.Add(Me.flpSubmit, 2, 0)
         Me.tlpInput.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpInput.Location = New System.Drawing.Point(3, 16)
         Me.tlpInput.Name = "tlpInput"
-        Me.tlpInput.RowCount = 1
+        Me.tlpInput.RowCount = 2
         Me.tlpInput.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpInput.Size = New System.Drawing.Size(588, 106)
+        Me.tlpInput.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpInput.Size = New System.Drawing.Size(588, 141)
         Me.tlpInput.TabIndex = 0
+        '
+        'flpClass
+        '
+        Me.flpClass.AutoSize = True
+        Me.flpClass.Controls.Add(Me.rbtCSharpSeparatedList)
+        Me.flpClass.Controls.Add(Me.rbtVBSeparatedList)
+        Me.flpClass.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.flpClass.Location = New System.Drawing.Point(88, 3)
+        Me.flpClass.Name = "flpClass"
+        Me.flpClass.Size = New System.Drawing.Size(412, 29)
+        Me.flpClass.TabIndex = 1
+        '
+        'rbtCSharpSeparatedList
+        '
+        Me.rbtCSharpSeparatedList.AutoSize = True
+        Me.rbtCSharpSeparatedList.Checked = True
+        Me.rbtCSharpSeparatedList.Location = New System.Drawing.Point(3, 3)
+        Me.rbtCSharpSeparatedList.Name = "rbtCSharpSeparatedList"
+        Me.rbtCSharpSeparatedList.Size = New System.Drawing.Size(130, 17)
+        Me.rbtCSharpSeparatedList.TabIndex = 0
+        Me.rbtCSharpSeparatedList.TabStop = True
+        Me.rbtCSharpSeparatedList.Text = "cSharp_SeparatedList"
+        Me.rbtCSharpSeparatedList.UseVisualStyleBackColor = True
+        '
+        'rbtVBSeparatedList
+        '
+        Me.rbtVBSeparatedList.AutoSize = True
+        Me.rbtVBSeparatedList.Location = New System.Drawing.Point(139, 3)
+        Me.rbtVBSeparatedList.Name = "rbtVBSeparatedList"
+        Me.rbtVBSeparatedList.Size = New System.Drawing.Size(108, 17)
+        Me.rbtVBSeparatedList.TabIndex = 1
+        Me.rbtVBSeparatedList.Text = "vb_SeparatedList"
+        Me.rbtVBSeparatedList.UseVisualStyleBackColor = True
+        '
+        'lblClass
+        '
+        Me.lblClass.AutoSize = True
+        Me.lblClass.Location = New System.Drawing.Point(3, 0)
+        Me.lblClass.Name = "lblClass"
+        Me.lblClass.Size = New System.Drawing.Size(38, 13)
+        Me.lblClass.TabIndex = 0
+        Me.lblClass.Text = "Class :"
         '
         'lblFromString
         '
         Me.lblFromString.AutoSize = True
-        Me.lblFromString.Location = New System.Drawing.Point(3, 0)
+        Me.lblFromString.Location = New System.Drawing.Point(3, 35)
         Me.lblFromString.Name = "lblFromString"
         Me.lblFromString.Size = New System.Drawing.Size(66, 13)
-        Me.lblFromString.TabIndex = 0
+        Me.lblFromString.TabIndex = 3
         Me.lblFromString.Text = "From String :"
         '
         'txtFromString
         '
         Me.txtFromString.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtFromString.Location = New System.Drawing.Point(88, 3)
+        Me.txtFromString.Location = New System.Drawing.Point(88, 38)
         Me.txtFromString.Multiline = True
         Me.txtFromString.Name = "txtFromString"
         Me.txtFromString.Size = New System.Drawing.Size(412, 100)
-        Me.txtFromString.TabIndex = 1
+        Me.txtFromString.TabIndex = 4
         '
         'flpSubmit
         '
@@ -135,7 +185,7 @@ Partial Class frmFromString
         Me.flpSubmit.FlowDirection = System.Windows.Forms.FlowDirection.TopDown
         Me.flpSubmit.Location = New System.Drawing.Point(506, 3)
         Me.flpSubmit.Name = "flpSubmit"
-        Me.flpSubmit.Size = New System.Drawing.Size(79, 100)
+        Me.flpSubmit.Size = New System.Drawing.Size(79, 29)
         Me.flpSubmit.TabIndex = 2
         '
         'btnSubmit
@@ -151,7 +201,7 @@ Partial Class frmFromString
         '
         Me.gbxSeparatedList.AutoSize = True
         Me.gbxSeparatedList.Controls.Add(Me.tlpSeparatedList)
-        Me.gbxSeparatedList.Location = New System.Drawing.Point(3, 134)
+        Me.gbxSeparatedList.Location = New System.Drawing.Point(3, 169)
         Me.gbxSeparatedList.Name = "gbxSeparatedList"
         Me.gbxSeparatedList.Size = New System.Drawing.Size(594, 257)
         Me.gbxSeparatedList.TabIndex = 1
@@ -340,7 +390,7 @@ Partial Class frmFromString
         Me.gbxOutput.AutoSize = True
         Me.gbxOutput.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.gbxOutput.Controls.Add(Me.tlpOutput)
-        Me.gbxOutput.Location = New System.Drawing.Point(3, 397)
+        Me.gbxOutput.Location = New System.Drawing.Point(3, 432)
         Me.gbxOutput.Name = "gbxOutput"
         Me.gbxOutput.Size = New System.Drawing.Size(594, 128)
         Me.gbxOutput.TabIndex = 2
@@ -388,7 +438,7 @@ Partial Class frmFromString
         Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 529)
+        Me.ClientSize = New System.Drawing.Size(600, 564)
         Me.Controls.Add(Me.tlpMain)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmFromString"
@@ -399,6 +449,8 @@ Partial Class frmFromString
         Me.gbxInput.PerformLayout()
         Me.tlpInput.ResumeLayout(False)
         Me.tlpInput.PerformLayout()
+        Me.flpClass.ResumeLayout(False)
+        Me.flpClass.PerformLayout()
         Me.flpSubmit.ResumeLayout(False)
         Me.gbxSeparatedList.ResumeLayout(False)
         Me.gbxSeparatedList.PerformLayout()
@@ -442,5 +494,9 @@ Partial Class frmFromString
     Friend WithEvents btnSubmit As System.Windows.Forms.Button
     Friend WithEvents txtUnusedSeparators As System.Windows.Forms.TextBox
     Friend WithEvents lblUnusedSeparators As System.Windows.Forms.Label
+    Friend WithEvents lblClass As System.Windows.Forms.Label
+    Friend WithEvents flpClass As System.Windows.Forms.FlowLayoutPanel
+    Friend WithEvents rbtCSharpSeparatedList As System.Windows.Forms.RadioButton
+    Friend WithEvents rbtVBSeparatedList As System.Windows.Forms.RadioButton
 
 End Class

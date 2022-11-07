@@ -2,7 +2,7 @@
 '*                                                                                                                                        *
 '*  Description:                                                                                                                          *
 '*                                                                                                                                        *
-'*  Test harness to demonstrate the cSeparatedList class                                                                                  *
+'*  Test harness to demonstrate the SeparatedList class                                                                                   *
 '*                                                                                                                                        *
 '******************************************************************************************************************************************
 '*                                                                                                                                        *
@@ -20,9 +20,9 @@ Public Class frmTestHarness
     '*******************************************************************************************************************************
     '* Private variables                                                                                                           *
     '*******************************************************************************************************************************
-    Private m_frmFromArrayChooseSeparator As frmFromArrayChooseSeparator
-    Private m_frmFromArraySingleSeparator As frmFromArraySingleSeparator
-    Private m_frmFromString As frmFromString
+    Private _frmFromArrayChooseSeparator As frmFromArrayChooseSeparator
+    Private _frmFromArraySingleSeparator As frmFromArraySingleSeparator
+    Private _frmFromString As frmFromString
 #End Region
 
 #Region "Private Methods"
@@ -36,37 +36,37 @@ Public Class frmTestHarness
     Private Sub btnFromString_Click(sender As System.Object, e As System.EventArgs) Handles btnFromString.Click
 
         ' Create a new instance of the the form if required
-        If m_frmFromString Is Nothing OrElse m_frmFromString.IsDisposed Then
-            m_frmFromString = New frmFromString()
+        If _frmFromString Is Nothing OrElse _frmFromString.IsDisposed Then
+            _frmFromString = New frmFromString()
         End If
 
         ' Display the form
-        m_ShowForm(m_frmFromString)
+        _showForm(_frmFromString)
     End Sub
 
     Private Sub btnFromArraySingleSeparator_Click(sender As System.Object, e As System.EventArgs) Handles btnFromArraySingleSeparator.Click
 
         ' Create a new instance of the the form if required
-        If m_frmFromArraySingleSeparator Is Nothing OrElse m_frmFromArraySingleSeparator.IsDisposed Then
-            m_frmFromArraySingleSeparator = New frmFromArraySingleSeparator()
+        If _frmFromArraySingleSeparator Is Nothing OrElse _frmFromArraySingleSeparator.IsDisposed Then
+            _frmFromArraySingleSeparator = New frmFromArraySingleSeparator()
         End If
 
         ' Display the form
-        m_ShowForm(m_frmFromArraySingleSeparator)
+        _showForm(_frmFromArraySingleSeparator)
     End Sub
 
     Private Sub btnFromArrayChooseSeparator_Click(sender As System.Object, e As System.EventArgs) Handles btnFromArrayChooseSeparator.Click
 
         ' Create a new instance of the the form if required
-        If m_frmFromArrayChooseSeparator Is Nothing OrElse m_frmFromArrayChooseSeparator.IsDisposed Then
-            m_frmFromArrayChooseSeparator = New frmFromArrayChooseSeparator()
+        If _frmFromArrayChooseSeparator Is Nothing OrElse _frmFromArrayChooseSeparator.IsDisposed Then
+            _frmFromArrayChooseSeparator = New frmFromArrayChooseSeparator()
         End If
 
         ' Display the form
-        m_ShowForm(m_frmFromArrayChooseSeparator)
+        _showForm(_frmFromArrayChooseSeparator)
     End Sub
 
-    Private Sub m_ShowForm(frmForm As Form)
+    Private Sub _showForm(frmForm As Form)
 
         ' Ensure the form is visible
         If Not frmForm.Visible Then
@@ -76,6 +76,5 @@ Public Class frmTestHarness
         ' Give focus to the required form
         frmForm.Focus()
     End Sub
-
 #End Region
 End Class
