@@ -1,4 +1,3 @@
-======================
 Separated List Project
 ======================
 
@@ -40,4 +39,4 @@ To start the application, open the SeparatedList.sln file in Visual Studio.Net a
 General Notes
 =============
 
-The are two versions of the Separated List class. The original VB version (vb_SeparatedList) and the newer c# version (cSharp_SeparatedList). The test harness is setup to run the c# version.
+There are two versions of the Separated List class. The original VB version (vb_SeparatedList) and the newer c# version (cSharp_SeparatedList). The test harness is setup to run the c# version.
