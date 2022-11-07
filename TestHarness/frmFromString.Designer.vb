@@ -390,6 +390,7 @@ Partial Class frmFromString
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 529)
         Me.Controls.Add(Me.tlpMain)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmFromString"
         Me.Text = "From String Value"
         Me.tlpMain.ResumeLayout(False)

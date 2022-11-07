@@ -94,6 +94,7 @@ Partial Class frmTestHarness
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1126, 849)
         Me.Controls.Add(Me.tlpMenu)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmTestHarness"
         Me.Text = "frmTestHarness"
         Me.tlpMenu.ResumeLayout(False)

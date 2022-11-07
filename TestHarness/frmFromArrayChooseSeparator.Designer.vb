@@ -42,6 +42,8 @@ Partial Class frmFromArrayChooseSeparator
         Me.lblStrings = New System.Windows.Forms.Label()
         Me.gbxSeparatedList = New System.Windows.Forms.GroupBox()
         Me.tlpSeparatedList = New System.Windows.Forms.TableLayoutPanel()
+        Me.txtUnusedSeparators = New System.Windows.Forms.TextBox()
+        Me.lblUnusedSeparators = New System.Windows.Forms.Label()
         Me.lbxEntries = New System.Windows.Forms.ListBox()
         Me.lblSeparator = New System.Windows.Forms.Label()
         Me.lblSelectedEntry = New System.Windows.Forms.Label()
@@ -59,8 +61,6 @@ Partial Class frmFromArrayChooseSeparator
         Me.tlpOutput = New System.Windows.Forms.TableLayoutPanel()
         Me.lblToString = New System.Windows.Forms.Label()
         Me.txtToString = New System.Windows.Forms.TextBox()
-        Me.lblUnusedSeparators = New System.Windows.Forms.Label()
-        Me.txtUnusedSeparators = New System.Windows.Forms.TextBox()
         Me.tlpMain.SuspendLayout()
         Me.gbxInput.SuspendLayout()
         Me.tlpInput.SuspendLayout()
@@ -316,6 +316,25 @@ Partial Class frmFromArrayChooseSeparator
         Me.tlpSeparatedList.Size = New System.Drawing.Size(588, 238)
         Me.tlpSeparatedList.TabIndex = 0
         '
+        'txtUnusedSeparators
+        '
+        Me.txtUnusedSeparators.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.txtUnusedSeparators.Enabled = False
+        Me.txtUnusedSeparators.Location = New System.Drawing.Point(88, 215)
+        Me.txtUnusedSeparators.Name = "txtUnusedSeparators"
+        Me.txtUnusedSeparators.ReadOnly = True
+        Me.txtUnusedSeparators.Size = New System.Drawing.Size(412, 20)
+        Me.txtUnusedSeparators.TabIndex = 10
+        '
+        'lblUnusedSeparators
+        '
+        Me.lblUnusedSeparators.AutoSize = True
+        Me.lblUnusedSeparators.Location = New System.Drawing.Point(3, 212)
+        Me.lblUnusedSeparators.Name = "lblUnusedSeparators"
+        Me.lblUnusedSeparators.Size = New System.Drawing.Size(50, 13)
+        Me.lblUnusedSeparators.TabIndex = 9
+        Me.lblUnusedSeparators.Text = "Unused :"
+        '
         'lbxEntries
         '
         Me.lbxEntries.Dock = System.Windows.Forms.DockStyle.Fill
@@ -494,25 +513,6 @@ Partial Class frmFromArrayChooseSeparator
         Me.txtToString.Size = New System.Drawing.Size(412, 103)
         Me.txtToString.TabIndex = 1
         '
-        'lblUnusedSeparators
-        '
-        Me.lblUnusedSeparators.AutoSize = True
-        Me.lblUnusedSeparators.Location = New System.Drawing.Point(3, 212)
-        Me.lblUnusedSeparators.Name = "lblUnusedSeparators"
-        Me.lblUnusedSeparators.Size = New System.Drawing.Size(50, 13)
-        Me.lblUnusedSeparators.TabIndex = 9
-        Me.lblUnusedSeparators.Text = "Unused :"
-        '
-        'txtUnusedSeparators
-        '
-        Me.txtUnusedSeparators.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.txtUnusedSeparators.Enabled = False
-        Me.txtUnusedSeparators.Location = New System.Drawing.Point(88, 215)
-        Me.txtUnusedSeparators.Name = "txtUnusedSeparators"
-        Me.txtUnusedSeparators.ReadOnly = True
-        Me.txtUnusedSeparators.Size = New System.Drawing.Size(412, 20)
-        Me.txtUnusedSeparators.TabIndex = 10
-        '
         'frmFromArrayChooseSeparator
         '
         Me.AcceptButton = Me.btnSubmit
@@ -520,6 +520,7 @@ Partial Class frmFromArrayChooseSeparator
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(601, 701)
         Me.Controls.Add(Me.tlpMain)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmFromArrayChooseSeparator"
         Me.Text = "From Array Choose Separator"
         Me.tlpMain.ResumeLayout(False)
